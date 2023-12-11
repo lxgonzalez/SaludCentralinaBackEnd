@@ -1,12 +1,10 @@
 package lgonzalez.service.impl;
 
-import lgonzalez.model.Consult;
 import lgonzalez.model.Patient;
 import lgonzalez.repo.IPatientRepo;
 import lgonzalez.service.IPatientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import jakarta.transaction.Transactional;
 
 import java.util.List;
 

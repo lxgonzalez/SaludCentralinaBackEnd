@@ -1,8 +1,6 @@
 package lgonzalez.service;
 
-import lgonzalez.model.Consult;
 import lgonzalez.model.Patient;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 

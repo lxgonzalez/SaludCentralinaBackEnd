@@ -14,14 +14,6 @@ public class ConsultServiceImpl implements IConsultService {
     @Autowired
     private IConsultRepo repo;
     @Override
-    public Consult save(Consult m) {
-        return repo.save(m);
-    }
-    @Override
-    public Consult update(Consult m) {
-        return repo.save(m);
-    }
-    @Override
     public Consult findById(Integer id) {
         return repo.findById(id).orElse(null);
     }
@@ -37,9 +29,8 @@ public class ConsultServiceImpl implements IConsultService {
 
     @Transactional
     @Override
-    public Consult saveTransactional(Consult consult) {
+    public void saveTransactional(Consult consult) {
         consult.getDetails().forEach(det -> det.setConsult(consult));
         repo.save(consult);
-        return null;
     }
 }
